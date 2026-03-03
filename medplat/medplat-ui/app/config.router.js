@@ -318,6 +318,16 @@
                         'mobile-library.service'
                     ])
                 })
+                .state('techo.chat', {
+                    url: '/chat',
+                    title: 'AI Assistant',
+                    templateUrl: 'app/chat/views/chat.html',
+                    controller: 'ChatController as chat',
+                    resolve: load([
+                        'chat.controller',
+                        'chat.service'
+                    ])
+                })
                 .state('techo.manage.usergeoservices', {
                     url: '/viewGeoServices',
                     title: 'View Geo Services',

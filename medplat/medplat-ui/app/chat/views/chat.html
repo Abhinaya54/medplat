@@ -1,0 +1,38 @@
+<div class="chat-widget container" style="max-width:900px;margin-top:20px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>AI Assistant</strong>
+            <div class="pull-right">
+                <select ng-model="chat.lang" ng-change="chat.setLanguage(chat.lang)" class="form-control input-sm" style="display:inline-block;width:auto;">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="gu">Gujarati</option>
+                </select>
+                <button class="btn btn-xs btn-link" ng-click="chat.clear()">Clear</button>
+            </div>
+        </div>
+        <div class="panel-body" style="height:420px;overflow:auto;background:#fafafa;">
+            <ul class="list-unstyled">
+                <li ng-repeat="m in chat.messages track by $index" style="margin-bottom:12px;">
+                    <div ng-if="m.from=='user'">
+                        <div class="well well-sm" style="background:#e6f7ff;margin:0;">You: {{m.text}}</div>
+                    </div>
+                    <div ng-if="m.from=='ai'">
+                        <div class="well well-sm" style="background:#fffbe6;margin:0;">AI: {{m.text}}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-footer">
+            <form ng-submit="chat.send()" class="form-inline">
+                <div class="form-group" style="width:78%;">
+                    <input type="text" ng-model="chat.input" class="form-control" placeholder="Type your message or issue..." style="width:100%;" />
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+                <label class="btn btn-default" style="margin-left:6px;">
+                    Attach <input type="file" style="display:none" />
+                </label>
+            </form>
+        </div>
+    </div>
+</div>

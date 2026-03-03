@@ -92,6 +92,8 @@
             'notification.controller': ['app/admin/applicationmanagement/notification/controllers/notification.controller.js'],
             'manage-notification.controller': ['app/admin/applicationmanagement/notification/manage-notification.controller.js'],
             'notification.service': ['app/admin/applicationmanagement/notification/services/notification.service.js'],
+            'chat.controller': ['app/chat/controllers/chat.controller.js'],
+            'chat.service': ['app/chat/services/chat.service.js'],
             'mo-verification.controller': ['app/fhs/moreverificationlevel2/controllers/mo-verification.controller.js'],
             'mo-cfhc-reverification.controller': ['app/fhs/mocfhcreverification/controllers/mo-cfhc-reverification.controller.js'],
             'verification.constants': ['app/fhs/mocfhcreverification/constants/verification.constants.js'],
